@@ -1,4 +1,5 @@
 "use client";
+import { Footer } from "@/components/footer";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
@@ -95,8 +96,8 @@ export function HomeLoggedOut() {
           </Dialog.Panel>
         </Dialog>
       </header>
-
       <CTA />
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,9 @@
 import { useRouter } from "next/navigation";
+import { useAuthContext } from "../context/auth_context";
 export function LogInForm() {
   const router = useRouter();
+  const { loggedIn, setLoggedIn } = useAuthContext();
+
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -69,6 +72,9 @@ export function LogInForm() {
               <button
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                onClick={() => {
+                  setLoggedIn(true);
+                }}
               >
                 Log in
               </button>
