@@ -3,14 +3,13 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 
-const navigation = [
-  { name: "Search", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
-
-export default function HomeLoggedOut() {
+// const navigation = [
+//   { name: "Search", href: "#" },
+//   { name: "Features", href: "#" },
+//   { name: "Marketplace", href: "#" },
+//   { name: "Company", href: "#" },
+// ];
+export function HomeLoggedOut() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -40,7 +39,7 @@ export default function HomeLoggedOut() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+          {/* <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
               <a
                 key={item.name}
@@ -50,7 +49,7 @@ export default function HomeLoggedOut() {
                 {item.name}
               </a>
             ))}
-          </div>
+          </div> */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
               href="#"
@@ -88,7 +87,7 @@ export default function HomeLoggedOut() {
             </div>
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
+                {/* <div className="space-y-2 py-6">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
@@ -98,7 +97,7 @@ export default function HomeLoggedOut() {
                       {item.name}
                     </a>
                   ))}
-                </div>
+                </div> */}
                 <div className="py-6">
                   <a
                     href="#"

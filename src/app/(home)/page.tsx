@@ -1,8 +1,8 @@
-import HomeLoggedOut from "@/features/homepage/home_logged_out";
+import { Home } from "@/features/homepage/home";
 export default function HomePage() {
   return (
     <div>
-      <HomeLoggedOut />
+      <Home />
     </div>
   );
 }
