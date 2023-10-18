@@ -2,8 +2,8 @@
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { LogIn } from "../../auth/components/log_in_modal";
 import { CTA } from "../components/cta_section";
-import { LogIn } from "../components/log_in_modal";
 
 export function HomeLoggedOut() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
