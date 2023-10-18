@@ -1,4 +1,5 @@
-import { Home } from "@/features/homepage/home";
+import { Home } from "@/features/homepage/index";
+
 export default function HomePage() {
   return (
     <div>
