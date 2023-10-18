@@ -2,18 +2,18 @@
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { LogIn } from "../components/log_in_modal";
 
-// const navigation = [
-//   { name: "Search", href: "#" },
-//   { name: "Features", href: "#" },
-//   { name: "Marketplace", href: "#" },
-//   { name: "Company", href: "#" },
-// ];
 export function HomeLoggedOut() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [logInModalOpen, setLogInModalOpen] = useState(false);
 
   return (
     <div className="bg-white">
+      <LogIn
+        logInModalOpen={logInModalOpen}
+        setLogInModalOpen={setLogInModalOpen}
+      />
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
@@ -39,24 +39,15 @@ export function HomeLoggedOut() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          {/* <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div> */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
+            <button
               className="text-sm font-semibold leading-6 text-gray-900"
+              onClick={() => {
+                setLogInModalOpen(true);
+              }}
             >
               Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            </button>
           </div>
         </nav>
         <Dialog
@@ -87,24 +78,16 @@ export function HomeLoggedOut() {
             </div>
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
-                {/* <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div> */}
                 <div className="py-6">
-                  <a
-                    href="#"
+                  <button
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setLogInModalOpen(true);
+                    }}
                   >
                     Log in
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
