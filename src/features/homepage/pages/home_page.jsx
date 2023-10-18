@@ -4,5 +4,5 @@ import { HomeLoggedOut } from "./home_logged_out";
 
 export function HomePage() {
   const { loggedIn } = useAuthContext();
-  return <div>{loggedIn ? <HomeLoggedIn /> : <HomeLoggedOut />}</div>;
+  return <>{loggedIn ? <HomeLoggedIn /> : <HomeLoggedOut />}</>;
 }
