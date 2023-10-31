@@ -3,6 +3,11 @@ import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 
+const navigation = [
+  { name: "Marketplace", href: "#" },
+  { name: "Adopted Pets", href: "#" },
+];
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
