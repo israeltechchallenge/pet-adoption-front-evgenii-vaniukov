@@ -4,7 +4,7 @@ import { CTA } from "../components/cta_section";
 
 const navigation = [
   { name: "Marketplace", href: "#" },
-  { name: "My Pets", href: "#" },
+  { name: "Adopted Pets", href: "#" },
 ];
 
 export function HomeLoggedIn() {
